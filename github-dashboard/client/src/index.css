@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-surface font-sans text-ink antialiased; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-brand; }
+}
+
+@layer components {
+  .card { @apply rounded-xl border border-line bg-white; }
+  .btn { @apply inline-flex min-h-[44px] items-center justify-center rounded-lg px-4 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-primary { @apply btn bg-brand text-white hover:bg-brand-dark; }
+  .btn-outline { @apply btn border border-slate-300 bg-white text-ink hover:bg-surface; }
+  .btn-danger { @apply btn border border-red-700 bg-white text-red-700 hover:bg-red-50; }
+}
